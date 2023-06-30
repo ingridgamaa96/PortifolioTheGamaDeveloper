@@ -2,11 +2,21 @@ import { TechBadge } from "@/app/components/tech-badge"
 import Image from "next/image"
 import { Button } from '@/app/components/button'
 import { HiArrowNarrowRight } from 'react-icons/hi'
+import {TbBrandGithub, TbBrandLinkedin, TbBrandWhatsapp} from 'react-icons/tb'
 
 const MOCK_CONTACTS = [
     {
-        url : 'https://github.com/ingridgamaa96'
-        icon:
+        url : 'https://github.com/ingridgamaa96',
+        icon: <TbBrandGithub />
+    },
+    {
+        url : 'https://www.linkedin.com/in/ingridsgama/',
+        icon: <TbBrandLinkedin/>
+    }
+    ,
+    {
+        url : 'https://github.com/ingridgamaa96',
+        icon: <TbBrandWhatsapp/>
     }
 ]
 
@@ -16,31 +26,43 @@ export const HeroSection = () => {
          <div className="container flex items-start justify-between flex-col-reverse lg:flex-row">
                 <div className="w-full lg:max-[530px]:">
                     <p className="font-mono text-emerald-400">Oi , meu nome é</p>
-                    <h2 className="text4xl font-medium mt-2"> Ingrid Gama </h2>
+                    <h2 className="text-4xl font-medium mt-2"> Ingrid Gama </h2>
 
                    <p className="text-gray-400 my-6 text-sm sm:text-base">Oi meu nome é Ingrid gama eu sou Desenvolvedor Beck-And 
                       </p>
 
-                <div className="flex flex-wrap gap-x 2 gap-y-3 lg:max-w-[340px]">
+                <div className="flex flex-wrap gap-x-2 gap-y-3 lg:max-w-[340px]">
                    {Array.from({length : 5}).map((_ , index) =>(
                     <TechBadge name = "Java"/>
                     ) ) }
                 </div>
 
-                <div className="mt-6 lg:mt-10 flex sm:items-center sm:gap-5 flex-col sm:flex-row">
+                <div className=" mt-3 lg:mt-10 flex sm:items-center sm:gap-5 flex-col sm:flex-row">
                    <Button className="w-max shadow-button">
                     Entre em Contato
                     <HiArrowNarrowRight size={18} />
                    </Button>
-                </div>
-            </div>
+                <div className="text-2xl text-blue-600 flex items-center h-20 gap-3">
+                   {MOCK_CONTACTS.map ((contact, index) => (
+                    <a href={contact.url}
+                    key={`contact-${index}`}
+                    target="_blank"
+                    className="hover:text-gray-100 transition-colors"
+                    >
+                        {contact.icon}
+                    </a>
+                   ))}
+                    </div>
+                 </div>
+             </div>
 
                 <Image
-                className="w-[300px] h-[300px] lg:w-[420px] lg:h-[404px] mb-6 lg:mb-0 shadow-2xl rounded-lg object-cover" 
+                 
                 width={420}
                 height={404}
                 src="/images/profile-pic.png"
                 alt="Foto Perfil Ingrid Gama"
+                className="w-[300px] h-[300px] lg:w-[420px] lg:h-[404px] mb-6 lg:mb-0 shedow-2xl rounded-lg object-contain"
                 />
             </div>
         </section>

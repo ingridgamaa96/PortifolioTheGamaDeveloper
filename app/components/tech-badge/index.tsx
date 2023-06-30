@@ -1,5 +1,5 @@
 type TechBadgeProps = {
-    name: string
+    name: string;
 }
 export const TechBadge = ({ name }: TechBadgeProps) => {
     return (
