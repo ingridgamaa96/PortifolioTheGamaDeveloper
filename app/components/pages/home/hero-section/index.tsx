@@ -2,6 +2,14 @@ import { TechBadge } from "@/app/components/tech-badge"
 import Image from "next/image"
 import { Button } from '@/app/components/button'
 import { HiArrowNarrowRight } from 'react-icons/hi'
+
+const MOCK_CONTACTS = [
+    {
+        url : 'https://github.com/ingridgamaa96'
+        icon:
+    }
+]
+
 export const HeroSection = () => {
     return (
         <section className="w-full lg:h-[755px] bg-hero-image bg-cover bg-center bg-no-repeat flex flex-col justify-end pb-10 sm:pb-32 py-32 lg:pb-[110px]">
