@@ -1,3 +1,4 @@
+import { TechBadge } from "@/app/components/tech-badge";
 import Image from "next/image";
 
 export const ProjectCard = () => {
@@ -27,7 +28,15 @@ export const ProjectCard = () => {
 
                 <p className="text-gray-400 my-6">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quisquam quos omnis incidunt recusandae fugit similique veniam voluptatem molestias eaque, minima temporibus libero. Velit totam non ipsum iusto, aliquam ducimus error quam praesentium expedita temporibus, similique eius! Reiciendis nisi eveniet sint? Voluptatibus cum velit id repellat consequatur magnam, officiis magni laboriosam!</p>
 
+
+            <div className=" flex gap-x-2 gap-y-3 flex-wrap mb-8 lg:max-w-[350px]">
+                <TechBadge name = "Next-js"/>
+                <TechBadge name = "Next-js"/>
+                <TechBadge name = "Next-js"/>
+                <TechBadge name = "Next-js"/>
             </div>
+            </div>
+
         </div>
     );
 }
